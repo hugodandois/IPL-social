@@ -17,14 +17,14 @@ export class PasswordChecker {
     }
 
     static containsAtLeast1number(password) {
-       if(password.match(/1/)){
-           return true;
-        }
-
-        if(password.match(/1234567890/)){
+        if(password.match(/[0-9]/)){
             return true;
         }
 
+        return false;
+    }
+
+    static nocontainTheCharIPL(password) {
         return false;
     }
 }
