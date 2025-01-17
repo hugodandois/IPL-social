@@ -29,6 +29,11 @@ describe("PasswordChecker class should implement a password checker function", f
         it("given a special character password", function() {
             expect(PasswordChecker.containsAtLeast1specialChar("!")).toBe(true);
         });
+        
+        it("given two special character password", function() {
+            expect(PasswordChecker.containsAtLeast1specialChar("!!")).toBe(true);
+        });
+
     });
 
 });
