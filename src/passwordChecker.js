@@ -1,12 +1,6 @@
 export class PasswordChecker {
     static containsAtLeast8chars(password) {
-        if(password.length == 1){
-            return false;
-        }
-        if(password.length == 0){
-            return false;
-        }
-        if(password.length == 7){
+        if(password.length < 8){
             return false;
         }
         return true;
