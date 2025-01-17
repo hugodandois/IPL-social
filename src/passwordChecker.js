@@ -15,4 +15,12 @@ export class PasswordChecker {
 
         return false;
     }
+
+    static containsAtLeast1number(password) {
+       if(password.match(/1/)){
+           return true;
+        }
+
+        return false;
+    }
 }
