@@ -6,6 +6,9 @@ export class PasswordChecker {
         if(password.length == 0){
             return false;
         }
+        if(password.length == 7){
+            return false;
+        }
         return true;
         
     }

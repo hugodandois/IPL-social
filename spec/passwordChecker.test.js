@@ -14,6 +14,10 @@ describe("PasswordChecker class should implement a password checker function", f
         it("given a password with 0 chararacter", function() {
             expect(PasswordChecker.containsAtLeast8chars("")).toBe(false);
         });
+
+        it("given a password with 7 chararacter", function() {
+            expect(PasswordChecker.containsAtLeast8chars("1234567")).toBe(false);
+        });
         
     });
 
