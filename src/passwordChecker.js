@@ -28,7 +28,11 @@ export class PasswordChecker {
         if(password.toLowerCase().includes('ipl')){
             return false;
         }
-        
+
         return true;
+    }
+
+    static isValid(password){
+        return this.containsAtLeast8chars(password) && this.containsAtLeast1specialChar(password) && this.containsAtLeast1number(password) && this.nocontainTheCharIPL(password);
     }
 }

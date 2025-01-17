@@ -72,6 +72,20 @@ describe("PasswordChecker class should implement a password checker function", f
         });
     });
 
+
+    describe("PasswordChecker function isValid", function() {
+        it("given a password 12345678", function() {
+            expect(PasswordChecker.isValid("12345678")).toBe(false);
+        });
+
+        it("given a password 12345678@", function() {
+            expect(PasswordChecker.isValid("12345678@")).toBe(true);
+        });
+
+
+
+    });
+
 });
 
 
