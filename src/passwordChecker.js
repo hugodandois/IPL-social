@@ -8,15 +8,11 @@ export class PasswordChecker {
     }
 
     static containsAtLeast1specialChar(password) {
-        if (password.match(/!/)){ 
+        const specialCharRegex = /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]+/;
+        if(specialCharRegex.test(password)){
             return true;
         }
-        if (password.match(/!!/)){ 
-            return true;
-        }
-        if (password.match(/@/)){ 
-            return true;
-        }
+
         return false;
     }
 }
