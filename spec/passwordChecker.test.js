@@ -34,6 +34,10 @@ describe("PasswordChecker class should implement a password checker function", f
             expect(PasswordChecker.containsAtLeast1specialChar("!!")).toBe(true);
         });
 
+        it("given a other special character password", function() {
+            expect(PasswordChecker.containsAtLeast1specialChar("12345678@")).toBe(true);
+        });
+
     });
 
 });
