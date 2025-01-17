@@ -25,12 +25,10 @@ export class PasswordChecker {
     }
 
     static nocontainTheCharIPL(password) {
-        if(password.match(/[IPL]/)){
+        if(password.toLowerCase().includes('ipl')){
             return false;
         }
-        if(password.match(/[ipl]/)){
-            return false;
-        }
+        
         return true;
     }
 }
