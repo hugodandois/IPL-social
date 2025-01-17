@@ -62,7 +62,14 @@ describe("PasswordChecker class should implement a password checker function", f
         it("given a password with IPL lowercase", function() {
             expect(PasswordChecker.nocontainTheCharIPL("ipl")).toBe(false);
         });
-        
+
+        it("given a password without IPL", function() {
+            expect(PasswordChecker.nocontainTheCharIPL("12345678")).toBe(true);
+        });
+
+        it("given a password with IPL lowercase and Uppercase", function() {
+            expect(PasswordChecker.nocontainTheCharIPL("Ipl")).toBe(false);
+        });
     });
 
 });
