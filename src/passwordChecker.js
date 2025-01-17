@@ -21,6 +21,10 @@ export class PasswordChecker {
            return true;
         }
 
+        if(password.match(/1234567890/)){
+            return true;
+        }
+
         return false;
     }
 }

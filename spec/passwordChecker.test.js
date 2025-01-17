@@ -48,7 +48,10 @@ describe("PasswordChecker class should implement a password checker function", f
         it("given a password with number", function() {
             expect(PasswordChecker.containsAtLeast1number("1")).toBe(true);
         });
-        
+
+        it("given a password with all number", function() {
+            expect(PasswordChecker.containsAtLeast1number("1234567890")).toBe(true);
+        });
     });
 
 });
