@@ -6,4 +6,11 @@ export class PasswordChecker {
         return true;
         
     }
+
+    static containsAtLeast1specialChar(password) {
+        if (password.match(/!/)){ 
+            return true;
+        }
+        return false;
+    }
 }
